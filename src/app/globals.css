@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hover:hover {
+  background: radial-gradient(
+      100% 100% at var(--g1-1-x-position) var(--g1-1-y-position),
+      #ee2c2c 0%,
+      transparent
+    ),
+    radial-gradient(
+      100% 100% at var(--g1-2-x-position) var(--g1-2-y-position),
+      #f58d2c 0%,
+      transparent
+    ),
+    #296bfa;
+  animation-name: g-1;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+  transition-timing-function: ease-in;
+}
+@property --g1-1-x-position {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 20%;
+}
+@property --g1-1-y-position {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 80%;
+}
+@property --g1-2-x-position {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 80%;
+}
+@property --g1-2-y-position {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 20%;
+}
+:root {
+  --g1-1-x-position: 20%;
+  --g1-1-y-position: 80%;
+  --g1-2-x-position: 80%;
+  --g1-2-y-position: 20%;
+}
+@keyframes g-1 {
+  25% {
+    --g1-1-x-position: 15%;
+    --g1-1-y-position: 15%;
+    --g1-2-x-position: 85%;
+    --g1-2-y-position: 80%;
+  }
+  50% {
+    --g1-1-x-position: 80%;
+    --g1-1-y-position: 15%;
+    --g1-2-x-position: 15%;
+    --g1-2-y-position: 85%;
+  }
+}
