@@ -3,10 +3,11 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { darcula } from 'react-syntax-highlighter/dist/esm/styles/prism'
 
 export default function Page() {
+  const URL_BASE = process.env.NEXT_PUBLIC_URL_BASE
   const codeString = `{
-    "characters": "http://127.0.0.1:8000/characters",
-    "planets": "http://127.0.0.1:8000/planets",
-    "transformations": "http://127.0.0.1:8000/transformations",
+    "characters": "${URL_BASE}/characters",
+    "planets": "${URL_BASE}/planets",
+    "transformations": "${URL_BASE}/transformations"
   }`
 
   const endpoint = `{
@@ -52,7 +53,7 @@ export default function Page() {
         <section className="py-6">
           <h2 className="text-2xl font-semibold mb-2">Información general</h2>
           <ul className="list-disc list-inside text-lg">
-            <li>URL base: {process.env.URL_BASE}</li>
+            <li>{`URL base: ${URL_BASE}`}</li>
             <li>Versión de la API: v1</li>
           </ul>
 
@@ -74,7 +75,7 @@ export default function Page() {
             respuestas que devuelven.
           </p>
           <a
-            href="http://127.0.0.1:8000/swagger-ui/"
+            href={`${URL_BASE}/swagger-ui/`}
             className="text-blue-400 text-xl hover:underline"
             target="_blank"
             rel="noopener noreferrer"
@@ -92,7 +93,7 @@ export default function Page() {
             claros y navegación sencilla.
           </p>
           <a
-            href="http://127.0.0.1:8000/api/schema/redoc/"
+            href={`${URL_BASE}/api/schema/redoc//`}
             className="text-blue-400 text-xl hover:underline"
             target="_blank"
             rel="noopener noreferrer"
