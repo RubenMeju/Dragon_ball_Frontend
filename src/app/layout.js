@@ -1,3 +1,4 @@
+import SearchForm from './components/SearchForm'
 import NavBar from './components/characters/navbar/NavBar'
 import './globals.css'
 import { Roboto } from 'next/font/google'
@@ -24,7 +25,14 @@ export default function RootLayout({ children }) {
       >
         <NavBar />
         <div className="bg-black/50">
-          <div className="w-[90%] m-auto max-w-screen-lg pt-20">{children}</div>
+          <div className="w-[90%] m-auto max-w-screen-lg pt-20">
+            <h1 className="py-2 text-center text-4xl text-white">
+              Dragon ball API
+            </h1>
+
+            <SearchForm />
+            {children}
+          </div>
         </div>
       </body>
     </html>

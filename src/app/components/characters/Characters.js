@@ -8,6 +8,7 @@ const ModalCharacter = dynamic(() => import('./ModalCharacter'))
 export default function Characters({ data }) {
   const [isOpen, setIsOpen] = useState(false)
   const [selectedCharacter, setSelectedCharacter] = useState(null)
+
   return (
     <>
       <ListCharacter

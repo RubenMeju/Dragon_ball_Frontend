@@ -3,12 +3,7 @@
     "browser": true,
     "es2021": true
   },
-  "extends": [
-    "standard",
-    "plugin:@next/next/recommended",
-    "eslint:recommended",
-    "next"
-  ],
+  "extends": ["standard", "next/babel"],
   "parserOptions": {
     "ecmaVersion": "latest",
     "sourceType": "module"
