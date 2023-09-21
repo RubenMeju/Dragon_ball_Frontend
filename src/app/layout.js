@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
         className={`${roboto.className} bg-gradient-to-r from-[#094293] via-[#6048ff] to-[#094293] `}
       >
         <NavBar />
-        <div className="  bg-black/50">
+        <div className="bg-black/50">
           <div className="w-[90%] m-auto max-w-screen-lg pt-20">{children}</div>
         </div>
       </body>

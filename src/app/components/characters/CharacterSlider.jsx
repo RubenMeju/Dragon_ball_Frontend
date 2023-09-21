@@ -16,7 +16,6 @@ export const settings = {
 
 const CharacterSlider = ({ selectedCharacter, setItemTransformation }) => {
   const handleClick = (item) => {
-    console.log('click', item)
     setItemTransformation(item)
   }
 

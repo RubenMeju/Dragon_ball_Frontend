@@ -43,13 +43,20 @@ export default function ModalCharacter({
               >
                 {selectedCharacter.name}
               </h1>
-              <button
+              <motion.button
                 onClick={closeModal}
-                className="w-10 h-10 rounded-md bg-blue-500 text-red"
+                className="w-10 h-10 rounded-md text-red"
                 aria-label="Close Modal"
+                style={{ backgroundColor: 'rgb(255, 152, 20) ' }}
+                whileHover={{
+                  background: 'rgb(255, 94, 51) ',
+                  scale: [1, 1.5, 1],
+                  rotate: [0, 270],
+                  borderRadius: ['20%', '20%', '50%', '50%', '20%']
+                }}
               >
                 <IconClose />
-              </button>
+              </motion.button>
             </div>
             {/* body */}
             <div className="h-[90%] p-4 bg-slate-50 flex flex-col justify-between gap-8">
