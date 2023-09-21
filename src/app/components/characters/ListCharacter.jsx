@@ -23,7 +23,7 @@ export const ListCharacter = ({ data, setIsOpen, setSelectedCharacter }) => {
         dataLength={characters.length}
         next={getMoreCharacters}
         hasMore={hasMore}
-        loader={hasMore ? <h3>Cargando...</h3> : null}
+        loader={hasMore ? <h3></h3> : null}
         endMessage={
           <h4 className="py-8 text-center text-xl text-white">
             {data.count} personajes
