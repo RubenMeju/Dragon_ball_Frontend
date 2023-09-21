@@ -30,7 +30,7 @@ export const ListCharacter = ({ data, setIsOpen, setSelectedCharacter }) => {
           </h4>
         }
       >
-        <div className="m-auto  grid w-[90%] grid-cols-3 gap-8 lg:w-full">
+        <div className="m-auto  grid w-[90%] grid-cols-3 gap-8 lg:w-full overflow-hidden">
           {characters.map((data) => (
             <motion.div
               layoutId={data.id}
