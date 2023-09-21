@@ -24,9 +24,9 @@ export default function RootLayout({ children }) {
         className={`${roboto.className} bg-gradient-to-r from-[#094293] via-[#6048ff] to-[#094293] `}
       >
         <NavBar />
-        <div className="bg-black/50">
+        <div className="bg-black/50 min-h-screen">
           <div className="w-[90%] m-auto max-w-screen-lg pt-20">
-            <h1 className="py-2 text-center text-4xl text-white">
+            <h1 className="py-8 text-center text-4xl text-white">
               Dragon ball API
             </h1>
 
